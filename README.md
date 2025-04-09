@@ -1,13 +1,43 @@
-# RecruitGeniusAI
+RecruitGeniusAI 🤖📄
+RecruitGeniusAI is an AI-powered recruitment assistant that automates resume parsing, job description summarization, and candidate shortlisting using on-prem LLMs via Ollama. Built with a multi-agent design, it streamlines the hiring workflow—from uploading resumes and JDs to sending interview invites—all through a simple Streamlit frontend.
 
-A Streamlit app that:
-- Parses resumes (PDF) & job descriptions (CSV)
-- Uses an Ollama LLM to match and shortlist candidates
-- Sends emails to shortlisted candidates
+🚀 Features
+Upload and parse resumes (PDF)
 
-## 🚀 Quickstart
+Summarize job descriptions from CSV
 
-1. **Clone this repo**  
-   ```bash
-   git clone https://github.com/<your-username>/RecruitGeniusAI.git
-   cd RecruitGeniusAI
+Match resumes with jobs using TinyLlama
+
+Shortlist candidates based on match score (80%+)
+
+Send personalized interview invites
+
+SQLite database for data storage
+
+Modular multi-agent backend
+
+🛠 Tech Stack
+Python, Streamlit, SQLite
+
+LangChain, Ollama (TinyLlama)
+
+PyPDF2, pandas, re (regex)
+
+📂 Folder Structure
+python
+Copy
+Edit
+📁 RecruitGeniusAI/
+├── 📄 backend.py          # Resume & JD parsing, matching logic
+├── 📄 frontend.py         # Streamlit frontend UI
+├── 📄 email_utils.py      # Email sending functions
+├── 📄 match.py            # Prompt building & score extraction
+├── 📂 resumes/            # PDF resumes folder
+├── 📄 job_descriptions.csv # Job description dataset
+├── 📄 database.db         # SQLite database
+📌 How to Run
+Clone the repo
+
+Place PDF resumes in /resumes and fill job_descriptions.csv
+
+Run frontend.py with streamlit run frontend.py
